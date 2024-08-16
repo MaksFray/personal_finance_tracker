@@ -8,7 +8,6 @@ def get_date(promt, allow_default=False):
     date_str = input(promt)
     if allow_default and not date_str:
         return datetime.today().strftime(DATE_FORMAT)
-
     try:
         valid_date = datetime.strptime(date_str, DATE_FORMAT)
         return valid_date.strftime(DATE_FORMAT)
